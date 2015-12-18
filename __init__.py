@@ -28,25 +28,25 @@ loop = LOOP_SETUP WHITESPACE NAME WHITESPACE LOOP_START WHITESPACE program
 
 class Visitor(NodeVisitor):
     def visit_NAME(self, node, visit):
-        ...
+        print("LOAD_NAME {}".format(node.match.group(0)))
 
     def visit_(self, node, visit):
         pass
 
     def visit_ASSIGNMENT(self, node, visit):
-        ...
+        pass
 
     def visit_WHITESPACE(self, node, visit):
         pass
 
     def visit_NUMBER(self, node, visit):
-        ...
+        print("LOAD_NUMBER {}".format(node.match.group(0)))
 
     def visit_SEMICOLON(self, node, visit):
         pass
 
     def visit_assignment(self, node, visit):
-        ...
+        print("STORE")
 
     def visit_PLUS(self, node, visit):
         ...
@@ -70,4 +70,4 @@ class Visitor(NodeVisitor):
         ...
 
     def visit_output(self, node, visit):
-        ...
+        print("PRINT")

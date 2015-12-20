@@ -49,25 +49,25 @@ class Visitor(NodeVisitor):
         print("STORE")
 
     def visit_PLUS(self, node, visit):
-        ...
+        print("ADD")
 
     def visit_MINUS(self, node, visit):
-        ...
+        print("MINUS")
 
     def visit_LOOP_SETUP(self, node, visit):
-        ...
+        print("LOOP_PUSH")
 
     def visit_LOOP_START(self, node, visit):
-        ...
+        print("LOOP_NAME")
 
     def visit_program(self, node, visit):
-        ...
+        print("END")
 
     def visit_LOOP_END(self, node, visit):
-        ...
+        print("LOOP_CHECK")
 
     def visit_loop(self, node, visit):
-        ...
+        print("LOOP_POP")
 
     def visit_output(self, node, visit):
         print("PRINT")

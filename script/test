@@ -1,0 +1,8 @@
+#!/bin/bash
+for file in test*.in
+do
+  echo "Testing $file"
+  test_out=${file//in/out}
+  output=$(./run.py < "$file" | ./bytecode_run.py)
+  diff $test_out - <<<$output
+done
